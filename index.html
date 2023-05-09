@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashFlow-App</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__title">
+                Учет расходов
+            </div>
+            <div class="expenses__inner">
+                <input type="number" 
+                name="expense" class="js-expenses__input expenses__input">
+                <button class="js-expenses__btn expenses__btn">Добавить</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h2>История</h2>
+            <div class="js-history">
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
