@@ -5,6 +5,14 @@ body {
 ol {
     list-style-position: inside;
 }
+
+p, h2 {
+    font-weight: 700;
+}
+
+span {
+    font-weight: 400;
+}
     
 
 .container {
