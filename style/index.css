@@ -49,12 +49,16 @@ span {
     border: 1px solid #000000;
 }
 
-.expenses__btn {
-    background-color: #0094FF;
+button {
     color: white;
-    padding: 10px 109px;
     font-size: 32px;
     line-height: 39px;
+    border-radius: 10px;
+}
+
+.expenses__btn {
+    background-color: #0094FF;
+    padding: 10px 109px;
 }
 
 .block__inner {
@@ -70,6 +74,23 @@ span {
 
 .status_red {
     color: red;
+}
+
+.limit {
+    padding-bottom: 13px;
+}
+
+.sum {
+    padding-bottom: 35px;
+}
+
+.stat {
+    padding-bottom: 123px;
+}
+
+.reset__btn {
+    background-color: #e25252;
+    padding: 10px 53px;
 }
 
 
