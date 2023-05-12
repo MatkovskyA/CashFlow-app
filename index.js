@@ -4,14 +4,16 @@ const STATUS_IN_LIMIT = 'всё хорошо';
 const STATUS_OUT_OF_LIMIT = 'всё плохо';
 const STATUS_OUT_OF_LIMIT_CLASSNAME = 'status_red';
 
-const inputNode = document.querySelector('.js-expenses__input');
-const buttonNode = document.querySelector('.js-expenses__btn');
-const historyNode = document.querySelector('.js-history');
-const sumNode = document.querySelector('.js-sum');
-const limitNode = document.querySelector('.js-limit');
-const statusNode = document.querySelector('.js-status');
+let inputNode = document.querySelector('.js-expenses__input');
+let buttonNode = document.querySelector('.js-expenses__btn');
+let historyNode = document.querySelector('.js-history');
+let sumNode = document.querySelector('.js-sum');
+let limitNode = document.querySelector('.js-limit');
+let statusNode = document.querySelector('.js-status');
+let button2Node = document.querySelector('.js-reset__btn');
 
-const expenses = [];
+
+let expenses = [];
 
 init(expenses);
 
@@ -26,6 +28,14 @@ buttonNode.addEventListener('click', function() {
 
     render(expenses);
 
+});
+
+button2Node.addEventListener("click", function () {
+    expenses = [];
+    sumNode.innerText = expenses;
+    historyNode.innerText = expenses;
+    statusNode.innerText = STATUS_IN_LIMIT;
+    statusNode.style.color = 'green';
 });
 
 function init(expenses) {
@@ -89,8 +99,11 @@ function renderSum(sum) {
 function renderStatus(sum) {
     if (sum <= LIMIT) {
         statusNode.innerText = STATUS_IN_LIMIT;
+        statusNode.style.color = 'green';
     } else {
         statusNode.innerText = STATUS_OUT_OF_LIMIT;
         statusNode.classList.add(STATUS_OUT_OF_LIMIT_CLASSNAME);
+        statusNode.style.color = 'red';
+
     }  
 };

@@ -54,6 +54,7 @@ button {
     font-size: 32px;
     line-height: 39px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .expenses__btn {
