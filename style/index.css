@@ -23,6 +23,7 @@ span {
 }
 
 .header__title {
+    text-align: center;
     font-size: 32px;
     line-height: 39px;
     font-weight: 700;
