@@ -39,15 +39,21 @@ span {
 
 }
 .expenses__input {
+    position: relative;
     box-sizing: border-box;
     max-width: 484px;
     font-size: 32px;
     line-height: 39px;
-    padding-left: 22px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 22px;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid #000000;
+}
+
+.input__rub::after {
+    content: "руб.";
+    float: right;
+    position: absolute;
+    text-align: center;
 }
 
 button {
