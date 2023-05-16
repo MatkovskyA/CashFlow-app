@@ -15,10 +15,12 @@
             <div class="header__title">
                 Учет расходов
             </div>
-            <div class="expenses__inner">
-                <div class="input__rub">
-                    <input type="number" 
-                    name="expense" class="js-expenses__input expenses__input">
+            <div class="expenses">
+                <div class="expenses__money">
+                    <input 
+                    type="number" 
+                    class="js-expenses__input expenses__input"
+                    min="0">
                 </div>
                 <button class="js-expenses__btn expenses__btn">Добавить</button>
             </div>
@@ -28,13 +30,13 @@
     </header>
     <main class="main">
         <div class="container">
-            <div class="block__inner">
-                <div class="left__block">
+            <div class="about__money">
+                <div class="cash__flow">
                     <p class="limit">Лимит: <span class="js-limit"></span> руб.</p>
                     <p class="sum">Всего: <span class="js-sum"></span> руб.</p>
                     <p class="stat">Статус: <span class="js-status status"></span></p>
                 </div>
-                <div class="right__block">
+                <div class="history">
                     <h2>История</h2>
                     <div class="js-history"></div>
                 </div>

@@ -31,29 +31,31 @@ span {
     padding-bottom: 41px;
 }
 
-.expenses__inner{
+.expenses {
     display: flex;
     justify-content: space-between;
     gap: 28px;
     margin-bottom: 51px;
-
 }
-.expenses__input {
-    position: relative;
-    box-sizing: border-box;
-    max-width: 484px;
+
+.expenses__money {
+    max-width: 100%;
     font-size: 32px;
     line-height: 39px;
     padding: 10px 22px;
-    background: rgba(255, 255, 255, 0.2);
     border: 1px solid #000000;
+
 }
 
-.input__rub::after {
+.expenses__input {
+    width: 80%;
+    border: none;
+    font-style: inherit;
+    
+}
+
+.expenses__money::after {
     content: "руб.";
-    float: right;
-    position: absolute;
-    text-align: center;
 }
 
 button {
@@ -69,7 +71,7 @@ button {
     padding: 10px 109px;
 }
 
-.block__inner {
+.about__money {
     display: flex;
     gap: 180px;
     font-size: 32px;
@@ -98,7 +100,7 @@ button {
 
 .reset__btn {
     background-color: #e25252;
-    padding: 10px 53px;
+    padding: 10px 73px;
 }
 
 
