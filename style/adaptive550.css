@@ -5,23 +5,31 @@
         gap: 25px;
     }
 
+    p, h2 {
+        font-weight: 400;
+    }
+    span {
+        font-weight: bold;
+    }
+    .header__title {
+        text-align: center;
+        font-size: 26px;
+        line-height: 29px;
+        padding-top: 37px;
+        padding-bottom: 21px;
+    }
+
     .stat {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
     .statistics {
         flex-direction: column;
-    }
-    
-    body {
-        background-color: no-repeat;
+        gap: 20px;
     }
 
     .container {
         max-width: 550px;
-    }
-    .header__title {
-        margin-left: 30px;
     }
 
     .expenses__btn {

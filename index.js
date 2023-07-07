@@ -17,6 +17,8 @@ const categorySelectedNode = document.querySelector('.js-category__select');
 // задаем новый лимит 
 const changeLimitBtn = document.querySelector('.js-change__limit');
 
+
+limitNode.innerText = localStorage.getItem('limit');
 // лимит суммы расходов
 let limit = parseInt(limitNode.innerText);
 // значение валюты
@@ -118,9 +120,21 @@ function changeLimitIconHandler() {
 
     limitNode.innerText = newLimitValue;
     limit = newLimitValue;
+    //сохраняем лимит в локальное хранилище
+    localStorage.setItem('limit', newLimitValue);
 
     render();
 }
+
+//сохранение лимита 
+function initLimit() {
+    const LimitFromStorage = parseInt(localStorage.getItem('limit'));
+    if (!LimitFromStorage) {
+        return
+    }
+    limitNode.innerText = LimitFromStorage;
+}
+
 
 // //обработчик по нажатию передает введенные данные пользователя
 addButtonNode.addEventListener('click', addBtnHandler);
