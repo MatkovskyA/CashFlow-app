@@ -2,7 +2,11 @@
     .expenses {
         flex-direction: column;
         justify-content: center;
-        row-gap: 25px;
+        gap: 25px;
+    }
+
+    .stat {
+        margin-bottom: 60px;
     }
 
     .statistics {
