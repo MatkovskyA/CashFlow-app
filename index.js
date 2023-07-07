@@ -17,10 +17,15 @@ const categorySelectedNode = document.querySelector('.js-category__select');
 // задаем новый лимит 
 const changeLimitBtn = document.querySelector('.js-change__limit');
 
+const STORAGE_LIMIT = 'limit';
+const STORAGE_EXPENSES = 'expenses';
 
 limitNode.innerText = localStorage.getItem('limit');
 // лимит суммы расходов
 let limit = parseInt(limitNode.innerText);
+// Объявление основной переменной с тратами, которая пополняется нажатием кнопки "Добавить"
+// РАСХОДЫ!
+let expenses = [];
 // значение валюты
 const CURRENCY = 'руб.';
 
@@ -28,10 +33,13 @@ const CURRENCY = 'руб.';
 const STATUS_IN_LIMIT = 'всё хорошо';
 const STATUS_OUT_OF_LIMIT = 'всё плохо';
 const NEW_LIMIT_TEXT = 'Задайте новый лимит';
-// Объявление основной переменной с тратами, которая пополняется нажатием кнопки "Добавить"
-// РАСХОДЫ!
-let expenses = [];
 
+const expensesFromLocStorageStr = localStorage.getItem(STORAGE_EXPENSES);
+const expensesFromLocStorage = JSON.parse(expensesFromLocStorageStr);
+if (Array.isArray(expensesFromLocStorage)) {
+    expenses = expensesFromLocStorage;
+}
+render();
 
 // ФУНКЦИИ ------------------------------------------
 // итоговая сумма трат
@@ -96,6 +104,7 @@ if (currentCategory === "Категория") {
     const newExpence = {amount: currentAmount, category: currentCategory};
 // добавляем в начало истории новое значение через push
     expenses.push(newExpence);
+    saveExpensesInGlobStorage();
 
 // обновляем данные 
     render();
@@ -121,14 +130,20 @@ function changeLimitIconHandler() {
     limitNode.innerText = newLimitValue;
     limit = newLimitValue;
     //сохраняем лимит в локальное хранилище
-    localStorage.setItem('limit', newLimitValue);
+    localStorage.setItem(STORAGE_LIMIT, newLimitValue);
 
     render();
 }
 
-//сохранение лимита 
+// сохраняем траты в localStorage
+function saveExpensesInGlobStorage() {
+    const expenString = JSON.stringify(expenses);
+    localStorage.setItem(STORAGE_EXPENSES, expenString);
+}
+
+//сохранение лимита в localStorage
 function initLimit() {
-    const LimitFromStorage = parseInt(localStorage.getItem('limit'));
+    const LimitFromStorage = parseInt(localStorage.getItem(STORAGE_LIMIT));
     if (!LimitFromStorage) {
         return
     }
