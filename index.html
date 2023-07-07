@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="resourses/icons8-деньги-48.png">
+    <link rel="icon" href="/resourses/icons8-деньги-48.png">
 </head>
 <body>
-    <header class="header container">
-        
+    <div class="container">
+    <header class="header">
             <div class="header__title">
                 Учет расходов
             </div>
@@ -40,14 +40,13 @@
         
     </header>
     <main class="main">
-        <div class="container">
             <div class="statistics">
                 <div class="cash__flow">
                     <p class="limit">Лимит: 
                         <span class="js-limit">10000</span> 
                         руб. 
                         <img class="js-change__limit change__limit" 
-                        src="/resourses/limit.png" 
+                        src="resourses/limit.png" 
                         alt="иконка смены лимита">
                     </p>
                     <p class="sum">Всего: 
@@ -69,5 +68,6 @@
     </main>
 
     <script src="index.js"></script>
+</div>
 </body>
 </html>

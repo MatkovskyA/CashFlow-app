@@ -1,0 +1,38 @@
+@media (max-width: 550px) {
+    .expenses {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 25px;
+    }
+
+    .statistics {
+        flex-direction: column;
+    }
+    
+    body {
+        background-color: no-repeat;
+    }
+
+    .container {
+        max-width: 550px;
+    }
+    .header__title {
+        margin-left: 30px;
+    }
+
+    .expenses__btn {
+        max-width: 100%;
+    }
+
+    .expenses__money {
+        font-size: 20px;
+    }
+
+    .select {
+        width: 100%;
+    }
+
+    .reset__btn {
+        width: 100%;
+    }
+}

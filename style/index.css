@@ -1,3 +1,5 @@
+@import "adaptive550.css";
+
 body {
     font-family: 'Inter', sans-serif;
     background: #f6b1b1;
@@ -42,7 +44,6 @@ span {
 
 .expenses__money {
     background-color: #fff;
-    max-width: 500px;
     font-size: 32px;
     line-height: 39px;
     padding: 10px 22px;
@@ -70,7 +71,6 @@ button {
 }
 
 .expenses__btn {
-    width: 400px;
     background-color: #0094FF;
     padding: 10px 109px;
 }
@@ -106,7 +106,7 @@ button {
 }
 
 .category__select {
-    width: 482px;
+    width: 100%;
     font-size: 32px;
     line-height: 39px;
     padding: 10px 22px;
@@ -121,32 +121,4 @@ button {
     padding: 5px;
 }
 
-
-@media (max-width: 350px) {
-    .expenses {
-        flex-direction: column;
-        justify-content: center;
-        row-gap: 25px;
-    }
-
-    .statistics {
-        flex-direction: column;
-    }
-    
-    body {
-        background-color: no-repeat;
-    }
-
-    .container {
-        width: 100%;
-        padding-right: 15px;
-    }
-    .header__title {
-        margin-left: 30px;
-    }
-
-    .expenses__btn {
-        width: 100%;
-    }
-}
 
