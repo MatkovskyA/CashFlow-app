@@ -20,12 +20,10 @@
                     <input 
                     type="number" 
                     class="js-expenses__input expenses__input"
-                    min="0">
+                    min="1">
                 </div>
-
                 <button class="js-expenses__btn expenses__btn">Добавить</button>
-            </div>
-            <div>
+                <div class="select">
                 <select class="js-category__select category__select">
                     <option hidden disabled selected value="Категория">Категория</option>
                     <option value="Кафе">Кафе и рестораны</option>
@@ -37,6 +35,10 @@
                     <option value="Обучение">Обучение и развитие</option>
                 </select>
             </div>
+            </div>
+            <div>
+
+            </div>
 
         </div>
     </header>
@@ -44,16 +46,29 @@
         <div class="container">
             <div class="statistics">
                 <div class="cash__flow">
-                    <p class="limit">Лимит: <span class="js-limit"></span> руб.</p>
-                    <p class="sum">Всего: <span class="js-sum"></span> руб.</p>
-                    <p class="stat">Статус: <span class="js-status status"></span></p>
+                    <p class="limit">Лимит: 
+                        <span class="js-limit">10000</span> 
+                        руб. 
+                        <img class="js-change__limit change__limit" 
+                        src="/resourses/limit.png" 
+                        alt="иконка смены лимита">
+                    </p>
+                    <p class="sum">Всего: 
+                        <span class="js-sum"></span> 
+                        руб.</p>
+                    
+                    <p class="stat">Статус: 
+                        <span class="js-status status"></span>
+                    </p>
+                    <button class="js-reset__btn reset__btn">Сбросить расходы</button>
                 </div>
                 <div class="history">
                     <h2>История:</h2>
-                    <div class="js-history"></div>
+                    <ol class="js-history">
+                        
+                    </ol>
                 </div>
             </div>
-            <button class="js-reset__btn reset__btn">Сбросить расходы</button>
         </div>
     </main>
 

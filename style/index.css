@@ -1,6 +1,9 @@
 body {
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(silver, green), no-repeat;
+    height: 1000px;
 }
+
 
 ol {
     list-style-position: inside;
@@ -16,7 +19,7 @@ span {
     
 
 .container {
-    width: 882px;
+    width: 1150px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
@@ -33,17 +36,20 @@ span {
 
 .expenses {
     display: flex;
-    justify-content: space-between;
-    gap: 28px;
-    margin-bottom: 51px;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 58px;
 }
 
 .expenses__money {
-    max-width: 100%;
+    background-color: #fff;
+    max-width: 500px;
     font-size: 32px;
     line-height: 39px;
     padding: 10px 22px;
     border: 1px solid #000000;
+    border-radius: 10px;
+
 }
 
 .expenses__input {
@@ -65,23 +71,19 @@ button {
 }
 
 .expenses__btn {
+    width: 400px;
     background-color: #0094FF;
     padding: 10px 109px;
 }
 
 .statistics {
+    width: 50% - 10px;
     display: flex;
-    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 66px;
     font-size: 32px;
     line-height: 39px;
-}
-
-.status {
-    color: green;
-}
-
-.status_red {
-    color: red;
 }
 
 .limit {
@@ -102,16 +104,33 @@ button {
 }
 
 .cash__flow {
-    width: 466px;
+    width: 486px;
 }
 
 .category__select {
-    width: 446px;
+    width: 482px;
     font-size: 32px;
     line-height: 39px;
     padding: 10px 22px;
     border: 1px solid #000000;
+    border-radius: 10px;
     margin-bottom: 65px;
 }
 
+.js-history {
+    overflow: scroll;
+    height: 200px;
+    padding: 5px;
+}
+
+
+@media (max-width: 350px) {
+    .expenses {
+        flex-direction: column;
+    }
+
+    .statistics {
+        flex-direction: column;
+    }
+}
 
