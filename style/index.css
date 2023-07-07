@@ -53,6 +53,7 @@ span {
 }
 
 .expenses__input {
+    outline: none;
     width: 80%;
     border: none;
     font-style: inherit;
