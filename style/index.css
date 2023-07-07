@@ -1,9 +1,7 @@
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(silver, green), no-repeat;
-    height: 1000px;
+    background: #f6b1b1;
 }
-
 
 ol {
     list-style-position: inside;
@@ -23,6 +21,7 @@ span {
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
+    display: block;
 }
 
 .header__title {
@@ -37,7 +36,7 @@ span {
 .expenses {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     gap: 58px;
 }
 
@@ -77,10 +76,9 @@ button {
 }
 
 .statistics {
-    width: 50% - 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     gap: 66px;
     font-size: 32px;
     line-height: 39px;
@@ -127,10 +125,28 @@ button {
 @media (max-width: 350px) {
     .expenses {
         flex-direction: column;
+        justify-content: center;
+        row-gap: 25px;
     }
 
     .statistics {
         flex-direction: column;
+    }
+    
+    body {
+        background-color: no-repeat;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+    }
+    .header__title {
+        margin-left: 30px;
+    }
+
+    .expenses__btn {
+        width: 100%;
     }
 }
 
