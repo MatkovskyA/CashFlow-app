@@ -92,10 +92,10 @@ if (currentCategory === "Категория") {
 }
 // задаем новое значение - трата+категория
     const newExpence = {amount: currentAmount, category: currentCategory};
-
+// добавляем в начало истории новое значение через push
     expenses.push(newExpence);
 
-
+// обновляем данные 
     render();
 
     clearInput(inputNode);
@@ -107,7 +107,7 @@ function clearBtnHandler() {
     render();
     statusNode.innerText = '';
 }
-
+// задаем новый лимит
 function changeLimitIconHandler() {
     const newLimit = prompt(NEW_LIMIT_TEXT);
     const newLimitValue = parseInt(newLimit);
