@@ -5,6 +5,10 @@ body {
     background: #f6b1b1;
 }
 
+a {
+    text-decoration: none;
+}
+
 ol {
     list-style-position: inside;
 }
@@ -33,6 +37,7 @@ span {
     font-weight: 700;
     padding-top: 67px;
     padding-bottom: 41px;
+    color: #000000;
 }
 
 .expenses {
