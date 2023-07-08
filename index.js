@@ -34,12 +34,12 @@ const STATUS_IN_LIMIT = 'всё хорошо';
 const STATUS_OUT_OF_LIMIT = 'всё плохо';
 const NEW_LIMIT_TEXT = 'Задайте новый лимит';
 
-const expensesFromLocStorageStr = localStorage.getItem(STORAGE_EXPENSES);
-const expensesFromLocStorage = JSON.parse(expensesFromLocStorageStr);
-if (Array.isArray(expensesFromLocStorage)) {
-    expenses = expensesFromLocStorage;
-}
-render();
+// const expensesFromLocStorageStr = localStorage.getItem(STORAGE_EXPENSES);
+// const expensesFromLocStorage = JSON.parse(expensesFromLocStorageStr);
+// if (Array.isArray(expensesFromLocStorage)) {
+//     expenses = expensesFromLocStorage;
+// }
+// render();
 
 // ФУНКЦИИ ------------------------------------------
 // итоговая сумма трат
