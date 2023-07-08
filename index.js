@@ -22,7 +22,7 @@ const STORAGE_EXPENSES = 'expenses';
 
 limitNode.innerText = localStorage.getItem('limit');
 // лимит суммы расходов
-let limit = parseInt(limitNode.innerText);
+let limit = limitNode.innerText;
 // Объявление основной переменной с тратами, которая пополняется нажатием кнопки "Добавить"
 // РАСХОДЫ!
 let expenses = [];
@@ -34,12 +34,12 @@ const STATUS_IN_LIMIT = 'всё хорошо';
 const STATUS_OUT_OF_LIMIT = 'всё плохо';
 const NEW_LIMIT_TEXT = 'Задайте новый лимит';
 
-// const expensesFromLocStorageStr = localStorage.getItem(STORAGE_EXPENSES);
-// const expensesFromLocStorage = JSON.parse(expensesFromLocStorageStr);
-// if (Array.isArray(expensesFromLocStorage)) {
-//     expenses = expensesFromLocStorage;
-// }
-// render();
+const expensesFromLocStorageStr = localStorage.getItem(STORAGE_EXPENSES);
+const expensesFromLocStorage = JSON.parse(expensesFromLocStorageStr);
+if (Array.isArray(expensesFromLocStorage)) {
+    expenses = expensesFromLocStorage;
+}
+render();
 
 // ФУНКЦИИ ------------------------------------------
 // итоговая сумма трат
@@ -104,7 +104,7 @@ if (currentCategory === "Категория") {
     const newExpence = {amount: currentAmount, category: currentCategory};
 // добавляем в начало истории новое значение через push
     expenses.push(newExpence);
- //   saveExpensesInGlobStorage();
+    //saveExpensesInGlobStorage();
 
 // обновляем данные 
     render();
@@ -118,7 +118,7 @@ function clearBtnHandler() {
     render();
     statusNode.innerText = '';
 }
-//задаем новый лимит
+// задаем новый лимит
 function changeLimitIconHandler() {
     const newLimit = prompt(NEW_LIMIT_TEXT);
     const newLimitValue = parseInt(newLimit);
@@ -156,4 +156,4 @@ addButtonNode.addEventListener('click', addBtnHandler);
 //обработчик по нажатию обнуляет введенные данные истории, статуса, итоговой суммы.
 resetButtonNode.addEventListener("click", clearBtnHandler);
 //обработчик по нажатию задает новый лимит 
-changeLimitBtn.addEventListener('click', changeLimitIconHandler);
+changeLimitBtn.addEventListener('click', changeLimitIconHandler)
