@@ -34,13 +34,6 @@ const STATUS_IN_LIMIT = 'всё хорошо';
 const STATUS_OUT_OF_LIMIT = 'всё плохо';
 const NEW_LIMIT_TEXT = 'Задайте новый лимит';
 
-// const expensesFromLocStorageStr = localStorage.getItem(STORAGE_EXPENSES);
-// const expensesFromLocStorage = JSON.parse(expensesFromLocStorageStr);
-// if (Array.isArray(expensesFromLocStorage)) {
-//     expenses = expensesFromLocStorage;
-// }
-// render();
-
 // ФУНКЦИИ ------------------------------------------
 // итоговая сумма трат
 function getTotal() {
@@ -139,12 +132,6 @@ function changeLimitIconHandler() {
     render();
 }
 
-// сохраняем траты в localStorage
-// function saveExpensesInGlobStorage() {
-//     const expenString = JSON.stringify(expenses);
-//     localStorage.setItem(STORAGE_EXPENSES, expenString);
-// }
-
 //сохранение лимита в localStorage
 function initLimit() {
     const LimitFromStorage = parseInt(localStorage.getItem(STORAGE_LIMIT));
@@ -154,10 +141,23 @@ function initLimit() {
     limitNode.innerText = LimitFromStorage;
 }
 
-
 // //обработчик по нажатию передает введенные данные пользователя
 addButtonNode.addEventListener('click', addBtnHandler);
 //обработчик по нажатию обнуляет введенные данные истории, статуса, итоговой суммы.
 resetButtonNode.addEventListener("click", clearBtnHandler);
 //обработчик по нажатию задает новый лимит 
 changeLimitBtn.addEventListener('click', changeLimitIconHandler)
+
+//----------localStorage for history------------
+// сохраняем траты в localStorage
+// function saveExpensesInGlobStorage() {
+//     const expenString = JSON.stringify(expenses);
+//     localStorage.setItem(STORAGE_EXPENSES, expenString);
+// }
+
+// const expensesFromLocStorageStr = localStorage.getItem(STORAGE_EXPENSES);
+// const expensesFromLocStorage = JSON.parse(expensesFromLocStorageStr);
+// if (Array.isArray(expensesFromLocStorage)) {
+//     expenses = expensesFromLocStorage;
+// }
+// render();
