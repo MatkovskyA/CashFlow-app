@@ -94,6 +94,10 @@ function addBtnHandler() {
         alert('Внесите сумму расходов');
         return;
     }
+    if (!limit || limit === '') {
+        alert("Укажите лимит денежных средств");
+        return
+    }
 // сохраняем выбранную категорию пользователем; если не выбрано - алерт!
 const currentCategory = getSelectCategory();
 if (currentCategory === "Категория") {
